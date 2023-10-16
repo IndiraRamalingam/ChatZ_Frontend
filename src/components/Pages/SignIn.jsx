@@ -24,12 +24,13 @@ function SignIn() {
       {  
           const response = await instance.authInstance.post('/users/signin',{email,password});
           sessionStorage.setItem("token", response.data.token)
-          if (response.status === 200) {
-            //const response = await instance.protectedInstance.get('/url/getId');
-           // const res=response.data;
-            //const params_id=res.user_ID;
-            //navigate(`/dashboard/${params_id}`)
-            navigate('/chats')
+          if (response.status === 200) 
+          {
+          const response = await instance.protectedInstance.get('/message/getId');
+          const res=response.data;
+          console.log(response)
+          const params_id=res.user_ID;
+          navigate(`/chats/${params_id}`)
           }   
       }
       catch(error)
@@ -50,7 +51,7 @@ function SignIn() {
   }
 
   const formStyles = {    
-    background: "#cbfeff2e",
+    background: "rgb(231 162 215 / 18%)",
     width: "40rem",
     borderRadius: "2.5rem",  
   };
@@ -63,7 +64,7 @@ function SignIn() {
         <div className="p-md-5" style={formStyles} >
             <Form onSubmit={handleSignin}>
               <div>
-                <h3 className="mb-4 text-uppercase" style={{color:"rgb(9 233 171)",'fontWeight':'bolder','textAlign':'center','fontStyle':'italic'}}>LOGIN PAGE</h3>
+                <h3 className="mb-4 mt-4 text-uppercase" style={{color:"rgb(9 233 171)",'fontWeight':'bolder','textAlign':'center','fontStyle':'italic'}}>LOGIN PAGE</h3>
                 <br/>
               </div>
                 <Form.Group className="mb-3">

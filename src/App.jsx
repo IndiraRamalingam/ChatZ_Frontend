@@ -6,6 +6,7 @@ import SignIn from './components/Pages/SignIn'
 import SignUp from './components/Pages/SignUp'
 import ForgotPassword from './components/Pages/ForgotPassword'
 import ResetPassword from './components/Pages/ResetPassword'
+import SetAvatar from './components/Messages/SetAvatar'
 
 
 
@@ -18,7 +19,8 @@ function App() {
           <Route path='/signup' element={<SignUp />} />
           <Route path='/forgot_password' element={<ForgotPassword />} />
           <Route path='/reset_password/:token' element={<ResetPassword />} />
-          <Route path='/chats' element={<ChatContainer />} />
+          <Route path='/chats/:id' element={<ChatContainer />} />
+           <Route path='/setAvatar/:id' element={<SetAvatar />} />
           <Route path="/" element={<Navigate to="/signin" replace />} />
         </Routes>
       </BrowserRouter>

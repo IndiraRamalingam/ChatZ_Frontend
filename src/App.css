@@ -1,0 +1,319 @@
+.headStyle{
+  margin-left: 175px;
+}
+
+.inputStyle{
+  height: 7vh;
+  width: 100%;
+  border-radius: 1rem;
+}
+.welcomeStyle{
+font-style: italic;
+}
+
+.container1{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    margin-top: -40px;
+}
+.container2{
+    align-content: center;
+    height: 80vh;
+    width: 80vw;
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/024/220/540/small_2x/abstract-simple-geometric-seamless-pattern-with-gold-line-texture-on-white-background-light-modern-simple-wallpaper-bright-tile-backdrop-monochrome-graphic-element-free-vector.jpg');
+    /* background-color: #00000076; */
+    display: grid;
+    grid-template-columns: 25% 75%;
+    @media screen and (min-width: 720px) and (max-width: 1080px) {
+      grid-template-columns: 35% 65%;
+    }
+}
+.contactContainer{
+    display: grid;
+    height: 80vh;
+    grid-template-rows: 10% 75% 15%;
+    overflow: hidden;
+    /* background-color: #d80e98; */
+    background-color:rgb(226, 208, 208);
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      height: 18vh;
+      justify-content: center;
+      font-style: italic;
+      color:#870808;
+      img {
+        height: 3rem;
+        width: 3rem;
+      }
+      h3 {
+        color: white;
+        text-transform: uppercase;
+        font-style: italic;
+      }
+    }
+    .contacts {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: auto;
+      gap: 0.8rem;
+      &::-webkit-scrollbar {
+        width: 0.2rem;
+        &-thumb {
+          background-color: #ffffff39;
+          width: 0.1rem;
+          border-radius: 1rem;
+        }
+      }
+      .contact {
+        font-style: italic;
+        background-color: #d8c0c0;
+        min-height: 5rem;
+        cursor: pointer;
+        width: 90%;
+        border-radius: 1rem;
+        padding: 0.4rem;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        transition: 0.5s ease-in-out;
+        .avatar {
+          img {
+            height: 3rem;
+          }
+        }
+        .username {
+          h3 {
+            color: white;
+            
+          }
+        }
+      }
+      .selected {
+        background-color: #cc9fc5;
+      }
+    }
+  
+    .current-user {
+      background-color: #afa3a1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-style: italic;
+      color: white;
+      font-family:math;
+      gap: 1rem;
+      .avatar {
+        img {
+          height: 4rem;
+          max-inline-size: 100%;
+        }
+      }
+      .username {
+        h2 {
+          color: white;
+        }
+      }
+      @media screen and (min-width: 720px) and (max-width: 1080px) {
+        gap: 0.5rem;
+        .username {
+          h2 {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+}
+
+.welcomeContainer{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(156, 94, 94);
+  flex-direction: column;
+  img {
+    height: 20rem;
+  }
+  span {
+    color: #4e0eff;
+  }
+}
+
+.chatinputContainer{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 5% 95%;
+  background-color: white;
+  padding: 0 2rem;
+  @media screen and (min-width: 720px) and (max-width: 1080px) {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+  .button-container {
+    display: flex;
+    align-items: center;
+    color:#ffff00c8;;
+    gap: 1rem;
+    .emoji {
+      position: relative;
+      svg {
+        font-size: 1.5rem;
+        color: #ffff00c8;
+        cursor: pointer;
+      }
+      .emoji-picker-react {
+        position: absolute;
+        top: -350px;
+        background-color: #080420;
+        box-shadow: 0 5px 10px #9a86f3;
+        border-color: #9a86f3;
+        .emoji-scroll-wrapper::-webkit-scrollbar {
+          background-color: #080420;
+          width: 5px;
+          &-thumb {
+            background-color: #9a86f3;
+          }
+        }
+        .emoji-categories {
+          button {
+            filter: contrast(0);
+          }
+        }
+        .emoji-search {
+          background-color: transparent;
+          border-color: #9a86f3;
+        }
+        .emoji-group:before {
+          background-color: #080420;
+        }
+      }
+    }
+  }
+  .input-container {
+    width: 100%;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: #e9ebf234;
+    input {
+      width: 90%;
+      height: 60%;
+      background-color: transparent;
+      color: rgb(224, 61, 61);
+      border: none;
+      padding-left: 1rem;
+      font-size: 1.2rem;
+
+      &::selection {
+        background-color: #9a86f3;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      padding: 0.3rem 2rem;
+      border-radius: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #9a86f3;
+      border: none;
+      @media screen and (min-width: 720px) and (max-width: 1080px) {
+        padding: 0.3rem 1rem;
+        svg {
+          font-size: 1rem;
+        }
+      }
+      svg {
+        font-size: 2rem;
+        color: white;
+      }
+    }
+  }
+}
+
+.chatContainer{
+  display: grid;
+  grid-template-rows: 10% 80% 10%;
+  gap: 0.1rem;
+  overflow: hidden;
+  @media screen and (min-width: 720px) and (max-width: 1080px) {
+    grid-template-rows: 15% 70% 15%;
+  }
+  .chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    .user-details {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 50px;
+      font-style: italic;
+      color: brown;
+      .avatar {
+        img {
+          height: 3rem;
+        }
+      }
+      .username {
+        h3 {
+          color: white;
+        }
+      }
+    }
+  }
+  .chat-messages {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 0.2rem;
+      &-thumb {
+        background-color: #ffffff39;
+        width: 0.1rem;
+        border-radius: 1rem;
+      }
+    }
+    .message {
+      display: flex;
+      align-items: center;
+      .content {
+        max-width: 40%;
+        overflow-wrap: break-word;
+        padding: 1rem;
+        font-size: 1.1rem;
+        border-radius: 1rem;
+        color: #870808;
+        @media screen and (min-width: 720px) and (max-width: 1080px) {
+          max-width: 70%;
+        }
+      }
+    }
+    .sended {
+      justify-content: flex-end;
+      .content {
+        background-color: #4f04ff21;
+      }
+    }
+    .recieved {
+      justify-content: flex-start;
+      .content {
+        background-color: #9900ff20;
+      }
+    }
+  }
+}

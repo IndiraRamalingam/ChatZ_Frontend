@@ -33,7 +33,7 @@ function ForgotPassword() {
 }
 
   const formStyles = {
-    background: "#cbfeff2e",
+    background: "rgb(231 162 215 / 18%)",
     width: "40rem",
     borderRadius: "2.5rem",  
   };
